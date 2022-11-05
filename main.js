@@ -2,7 +2,7 @@
 canvas = document.getElementById('myCanvas');
 ctx = canvas.getContext("2d");
 //Give specific height and width to the car image
-greencar_height= 70;
+greencar_height= 160;
 greencar_width= 100;
 background_image = "parkingLot.jpg";
 greencar_image = "car2.png";
@@ -15,11 +15,11 @@ function add() {
 	
 		background_imgTag = new Image();
 		background_imgTag.onload = uploadBackground;
-		background_imgTag.src= background_img;
+		background_imgTag.src= background_image;
 		
 		greencar_imgTag = new Image();
 		greencar_imgTag.onload = uploadgreencar;
-		greencar_imgTag.src= car_img;
+		greencar_imgTag.src= greencar_image;
 }
 
 function uploadBackground() {
@@ -74,7 +74,7 @@ function up()
 		greencar_y= greencar_y-20;
 		console.log("When up key is pressed, x="+ greencar_x +"& y="+ greencar_y);
 		uploadBackground();
-		uploadRover();
+		uploadgreencar();
 	}
 }
 
@@ -85,7 +85,7 @@ function down()
 		greencar_y= greencar_y+10;
 		console.log("When down key is pressed, x="+ greencar_x + "& y="+ greencar_y);
 		uploadBackground();
-		uploadRover();
+		uploadgreencar();
 	}
 }
 
@@ -96,7 +96,7 @@ function left()
 		greencar_x= greencar_x-20;
 		console.log("When left key key is pressed, x="+ greencar_x + "&y="+ greencar_y);
 		uploadBackground();
-		uploadRover();
+		uploadgreencar();
 	}
 }
 
@@ -107,6 +107,6 @@ function right()
 		greencar_x= greencar_x+20;
 		console.log("When right key is pressed, x="+ greencar_x + "& y="+ greencar_y);
 		uploadBackground();
-		uploadRover();
+		uploadgreencar();
 	}
 }
